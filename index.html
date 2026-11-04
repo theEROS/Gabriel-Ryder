@@ -48,7 +48,7 @@
             background: #3b82f6;
             border-radius: 8px;
         }
-        /* 270x270 Sabit Boyutlu Galeri Kutuları */
+        /* 270x270 Sabit Boyut */
         .fixed-box {
             width: 270px;
             height: 270px;
@@ -99,15 +99,15 @@
     <!-- MAIN CONTENT -->
     <main class="max-w-[1700px] mx-auto px-4 py-4 flex-grow w-full grid grid-cols-1 lg:grid-cols-12 gap-4 overflow-hidden h-[calc(100vh-140px)]">
 
-        <!-- SOL GÖRSEL ALANI (270x270 Kutular) -->
+        <!-- SOL GÖRSEL ALANI (2 Sütun x 3 Satır / 6 Kare) -->
         <aside class="lg:col-span-3 flex flex-col h-full overflow-hidden">
             <h3 class="text-lg font-bold font-orbitron text-cyan-400 flex items-center gap-2 mb-2 shrink-0 justify-start">
                 <i class="fa-solid fa-camera"></i> GALERİ
             </h3>
             <div class="custom-scroll pr-1 flex-grow">
-                <div class="flex flex-col gap-3 items-center">
+                <div class="grid grid-cols-2 gap-3 justify-items-center">
                     <script>
-                        for(let i=1; i<=15; i++) {
+                        for(let i=1; i<=6; i++) {
                             document.write(`
                                 <div class="gallery-item fixed-box bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-3 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sol+Kare+${i}', 'Sol Kare #${i}')">
                                     <i class="fa-solid fa-image text-4xl text-gray-600 mb-2"></i>
@@ -167,13 +167,13 @@
             </div>
         </section>
 
-        <!-- SAĞ GÖRSEL ALANI (270x270 Kutular) -->
+        <!-- SAĞ GÖRSEL ALANI (2 Sütun x 3 Satır / 6 Kare) -->
         <aside class="lg:col-span-3 flex flex-col h-full overflow-hidden">
             <div class="h-7 mb-2 shrink-0"></div>
             <div class="custom-scroll pr-1 flex-grow">
-                <div class="flex flex-col gap-3 items-center">
+                <div class="grid grid-cols-2 gap-3 justify-items-center">
                     <script>
-                        for(let i=1; i<=15; i++) {
+                        for(let i=1; i<=6; i++) {
                             document.write(`
                                 <div class="gallery-item fixed-box bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-3 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sag+Kare+${i}', 'Sağ Kare #${i}')">
                                     <i class="fa-solid fa-image text-4xl text-gray-600 mb-2"></i>
