@@ -48,6 +48,12 @@
             background: #3b82f6;
             border-radius: 8px;
         }
+        /* 270x270 Sabit Boyutlu Galeri Kutuları */
+        .fixed-box {
+            width: 270px;
+            height: 270px;
+            flex-shrink: 0;
+        }
         .gallery-item {
             cursor: pointer;
             transition: all 0.3s ease;
@@ -66,21 +72,23 @@
         <div class="max-w-[1700px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
             <div class="flex flex-col md:flex-row items-center gap-4">
                 <div class="relative">
-                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-blue-600 to-cyan-400 p-1 shadow-lg shadow-blue-500/20">
-                        <div class="w-full h-full bg-gray-900 rounded-2xl flex items-center justify-center overflow-hidden">
-                            <i class="fa-solid fa-user-secret text-2xl text-blue-400"></i>
+                    <!-- 270x270 Başlık / Profil Alanı -->
+                    <div class="fixed-box rounded-2xl bg-gradient-to-tr from-blue-600 to-cyan-400 p-1 shadow-lg shadow-blue-500/20" style="width: 270px; height: 270px;">
+                        <div class="w-full h-full bg-gray-900 rounded-2xl flex flex-col items-center justify-center overflow-hidden relative">
+                            <i class="fa-solid fa-user-secret text-7xl text-blue-400 mb-2"></i>
+                            <span class="text-white font-orbitron font-bold text-lg">Gabriel Ryder</span>
                         </div>
                     </div>
-                    <span class="absolute -bottom-2 -right-2 bg-blue-600 text-[10px] font-orbitron px-2 py-0.5 rounded-full text-white border border-blue-400 shadow">CREW RP</span>
+                    <span class="absolute -bottom-2 -right-2 bg-blue-600 text-xs font-orbitron px-3 py-1 rounded-full text-white border border-blue-400 shadow z-10">CREW RP</span>
                 </div>
                 <div class="text-center md:text-left">
-                    <span class="text-cyan-400 font-orbitron text-xs tracking-widest uppercase font-bold">Karakter Tanıtım Günlüğü</span>
-                    <h1 class="text-2xl md:text-3xl font-black font-orbitron text-white mt-0.5 neon-glow">Gabriel Ryder</h1>
-                    <p class="text-gray-300 text-sm font-bold">Mahlas: <span class="text-blue-400">"Gabi"</span> | Yaş: <span class="text-white">21</span></p>
+                    <span class="text-cyan-400 font-orbitron text-sm tracking-widest uppercase font-bold">Karakter Tanıtım Günlüğü</span>
+                    <h1 class="text-3xl md:text-4xl font-black font-orbitron text-white mt-1 neon-glow">Gabriel Ryder</h1>
+                    <p class="text-gray-300 text-base font-bold mt-1">Mahlas: <span class="text-blue-400">"Gabi"</span> | Yaş: <span class="text-white">21</span></p>
                 </div>
             </div>
 
-            <div class="bg-gray-900/80 p-3 rounded-xl border border-blue-500/30 flex flex-wrap gap-4 text-sm font-bold">
+            <div class="bg-gray-900/80 p-4 rounded-xl border border-blue-500/30 flex flex-wrap gap-4 text-sm font-bold">
                 <div><span class="text-gray-400">Doğum:</span> <span class="text-yellow-400">08-03-2005</span></div>
                 <div><span class="text-gray-400">Uyruk:</span> <span class="text-blue-400">LS</span></div>
                 <div><span class="text-gray-400">Doğum Yeri:</span> <span class="text-emerald-400">Los Santos</span></div>
@@ -89,21 +97,21 @@
     </header>
 
     <!-- MAIN CONTENT -->
-    <main class="max-w-[1700px] mx-auto px-4 py-4 flex-grow w-full grid grid-cols-1 lg:grid-cols-12 gap-4 overflow-hidden h-[calc(100vh-110px)]">
+    <main class="max-w-[1700px] mx-auto px-4 py-4 flex-grow w-full grid grid-cols-1 lg:grid-cols-12 gap-4 overflow-hidden h-[calc(100vh-140px)]">
 
-        <!-- SOL GÖRSEL ALANI (3x5 Grid / 15 Kare) -->
+        <!-- SOL GÖRSEL ALANI (270x270 Kutular) -->
         <aside class="lg:col-span-3 flex flex-col h-full overflow-hidden">
-            <h3 class="text-base font-bold font-orbitron text-cyan-400 flex items-center gap-2 mb-2 shrink-0 justify-start">
+            <h3 class="text-lg font-bold font-orbitron text-cyan-400 flex items-center gap-2 mb-2 shrink-0 justify-start">
                 <i class="fa-solid fa-camera"></i> GALERİ
             </h3>
             <div class="custom-scroll pr-1 flex-grow">
-                <div class="grid grid-cols-3 gap-2.5">
+                <div class="flex flex-col gap-3 items-center">
                     <script>
                         for(let i=1; i<=15; i++) {
                             document.write(`
-                                <div class="gallery-item aspect-square bg-gray-900 rounded-lg border border-blue-900/50 flex flex-col items-center justify-center p-1 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sol+Kare+${i}', 'Sol Kare #${i}')">
-                                    <i class="fa-solid fa-image text-xl text-gray-600 mb-1"></i>
-                                    <span class="text-[9px] font-bold text-gray-400">Kare #${i}</span>
+                                <div class="gallery-item fixed-box bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-3 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sol+Kare+${i}', 'Sol Kare #${i}')">
+                                    <i class="fa-solid fa-image text-4xl text-gray-600 mb-2"></i>
+                                    <span class="text-sm font-bold text-gray-400">Kare #${i}</span>
                                 </div>
                             `);
                         }
@@ -159,17 +167,17 @@
             </div>
         </section>
 
-        <!-- SAĞ GÖRSEL ALANI (3x5 Grid / 15 Kare) -->
+        <!-- SAĞ GÖRSEL ALANI (270x270 Kutular) -->
         <aside class="lg:col-span-3 flex flex-col h-full overflow-hidden">
             <div class="h-7 mb-2 shrink-0"></div>
             <div class="custom-scroll pr-1 flex-grow">
-                <div class="grid grid-cols-3 gap-2.5">
+                <div class="flex flex-col gap-3 items-center">
                     <script>
                         for(let i=1; i<=15; i++) {
                             document.write(`
-                                <div class="gallery-item aspect-square bg-gray-900 rounded-lg border border-blue-900/50 flex flex-col items-center justify-center p-1 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sag+Kare+${i}', 'Sağ Kare #${i}')">
-                                    <i class="fa-solid fa-image text-xl text-gray-600 mb-1"></i>
-                                    <span class="text-[9px] font-bold text-gray-400">Kare #${i}</span>
+                                <div class="gallery-item fixed-box bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-3 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sag+Kare+${i}', 'Sağ Kare #${i}')">
+                                    <i class="fa-solid fa-image text-4xl text-gray-600 mb-2"></i>
+                                    <span class="text-sm font-bold text-gray-400">Kare #${i}</span>
                                 </div>
                             `);
                         }
