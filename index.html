@@ -93,10 +93,10 @@
     <!-- MAIN CONTENT (Tam Ekran Sabit Düzen) -->
     <main class="max-w-[1700px] mx-auto px-4 py-4 flex-grow w-full grid grid-cols-1 lg:grid-cols-12 gap-6 overflow-hidden h-[calc(100vh-130px)]">
 
-        <!-- SOL GÖRSEL ALANI (4'lü Grid) -->
+        <!-- SOL GÖRSEL ALANI (4x8 / 8'li Grid) -->
         <aside class="lg:col-span-3 flex flex-col h-full overflow-hidden">
-            <h3 class="text-lg font-bold font-orbitron text-cyan-400 flex items-center gap-2 mb-2 shrink-0">
-                <i class="fa-solid fa-camera"></i> Sol Galeri (4 Alan)
+            <h3 class="text-lg font-bold font-orbitron text-cyan-400 flex items-center gap-2 mb-2 shrink-0 justify-start">
+                <i class="fa-solid fa-camera"></i> GALERİ
             </h3>
             <div class="custom-scroll pr-1 space-y-3 overflow-y-auto flex-grow">
                 <div class="grid grid-cols-2 gap-3">
@@ -119,6 +119,26 @@
                     <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sol+Kare+4', 'Sol Kare #4')">
                         <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
                         <span class="text-[10px] font-bold text-gray-400">Kare #4</span>
+                    </div>
+                    <!-- Sol 5 -->
+                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sol+Kare+5', 'Sol Kare #5')">
+                        <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
+                        <span class="text-[10px] font-bold text-gray-400">Kare #5</span>
+                    </div>
+                    <!-- Sol 6 -->
+                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sol+Kare+6', 'Sol Kare #6')">
+                        <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
+                        <span class="text-[10px] font-bold text-gray-400">Kare #6</span>
+                    </div>
+                    <!-- Sol 7 -->
+                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sol+Kare+7', 'Sol Kare #7')">
+                        <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
+                        <span class="text-[10px] font-bold text-gray-400">Kare #7</span>
+                    </div>
+                    <!-- Sol 8 -->
+                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sol+Kare+8', 'Sol Kare #8')">
+                        <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
+                        <span class="text-[10px] font-bold text-gray-400">Kare #8</span>
                     </div>
                 </div>
             </div>
@@ -172,50 +192,49 @@
             </div>
         </section>
 
-        <!-- SAĞ GÖRSEL ALANI (8'li Grid) -->
+        <!-- SAĞ GÖRSEL ALANI (4x8 / 8'li Grid) -->
         <aside class="lg:col-span-3 flex flex-col h-full overflow-hidden">
-            <h3 class="text-lg font-bold font-orbitron text-cyan-400 flex items-center gap-2 mb-2 shrink-0">
-                <i class="fa-solid fa-camera"></i> Sağ Galeri (8 Alan)
-            </h3>
+            <!-- Sağ tarafın üstünde başlık alanı boş bırakıldı / ya da simetri için görünmez alan -->
+            <div class="h-8 mb-2 shrink-0"></div>
             <div class="custom-scroll pr-1 space-y-3 overflow-y-auto flex-grow">
                 <div class="grid grid-cols-2 gap-3">
                     <!-- Sağ 1 -->
-                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sağ+Kare+1', 'Sağ Kare #1')">
+                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sag+Kare+1', 'Sağ Kare #1')">
                         <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
                         <span class="text-[10px] font-bold text-gray-400">Kare #1</span>
                     </div>
                     <!-- Sağ 2 -->
-                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sağ+Kare+2', 'Sağ Kare #2')">
+                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sag+Kare+2', 'Sağ Kare #2')">
                         <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
                         <span class="text-[10px] font-bold text-gray-400">Kare #2</span>
                     </div>
                     <!-- Sağ 3 -->
-                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sağ+Kare+3', 'Sağ Kare #3')">
+                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sag+Kare+3', 'Sağ Kare #3')">
                         <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
                         <span class="text-[10px] font-bold text-gray-400">Kare #3</span>
                     </div>
                     <!-- Sağ 4 -->
-                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sağ+Kare+4', 'Sağ Kare #4')">
+                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sag+Kare+4', 'Sağ Kare #4')">
                         <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
                         <span class="text-[10px] font-bold text-gray-400">Kare #4</span>
                     </div>
                     <!-- Sağ 5 -->
-                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sağ+Kare+5', 'Sağ Kare #5')">
+                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sag+Kare+5', 'Sağ Kare #5')">
                         <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
                         <span class="text-[10px] font-bold text-gray-400">Kare #5</span>
                     </div>
                     <!-- Sağ 6 -->
-                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sağ+Kare+6', 'Sağ Kare #6')">
+                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sag+Kare+6', 'Sağ Kare #6')">
                         <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
                         <span class="text-[10px] font-bold text-gray-400">Kare #6</span>
                     </div>
                     <!-- Sağ 7 -->
-                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sağ+Kare+7', 'Sağ Kare #7')">
+                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sag+Kare+7', 'Sağ Kare #7')">
                         <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
                         <span class="text-[10px] font-bold text-gray-400">Kare #7</span>
                     </div>
                     <!-- Sağ 8 -->
-                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sağ+Kare+8', 'Sağ Kare #8')">
+                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sag+Kare+8', 'Sağ Kare #8')">
                         <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
                         <span class="text-[10px] font-bold text-gray-400">Kare #8</span>
                     </div>
