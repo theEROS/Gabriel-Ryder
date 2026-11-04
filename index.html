@@ -32,7 +32,7 @@
             color: #f3f4f6;
             margin-bottom: 1.25rem;
         }
-        /* Sadece orta alanın kaydırılabilmesi için özel scrollbar */
+        /* Sadece alanların kendi içinde kaydırılabilmesi için özel scrollbar */
         .custom-scroll {
             overflow-y: auto;
             scrollbar-width: thin;
@@ -77,4 +77,190 @@
                 <div class="text-center md:text-left">
                     <span class="text-cyan-400 font-orbitron text-xs tracking-widest uppercase font-bold">Karakter Tanıtım Günlüğü</span>
                     <h1 class="text-2xl md:text-3xl font-black font-orbitron text-white mt-0.5 neon-glow">Gabriel Ryder</h1>
-                    <p class="text-gray-300 text-
+                    <p class="text-gray-300 text-sm font-bold">Mahlas: <span class="text-blue-400">"Gabi"</span> | Yaş: <span class="text-white">21</span></p>
+                </div>
+            </div>
+
+            <!-- Karakter Künyesi Kutusu -->
+            <div class="bg-gray-900/80 p-3 rounded-xl border border-blue-500/30 flex flex-wrap gap-4 text-sm font-bold">
+                <div><span class="text-gray-400">Doğum:</span> <span class="text-yellow-400">08-03-2005</span></div>
+                <div><span class="text-gray-400">Uyruk:</span> <span class="text-blue-400">LS</span></div>
+                <div><span class="text-gray-400">Doğum Yeri:</span> <span class="text-emerald-400">Los Santos</span></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT (Tam Ekran Sabit Düzen) -->
+    <main class="max-w-[1700px] mx-auto px-4 py-4 flex-grow w-full grid grid-cols-1 lg:grid-cols-12 gap-6 overflow-hidden h-[calc(100vh-130px)]">
+
+        <!-- SOL GÖRSEL ALANI (4'lü Grid) -->
+        <aside class="lg:col-span-3 flex flex-col h-full overflow-hidden">
+            <h3 class="text-lg font-bold font-orbitron text-cyan-400 flex items-center gap-2 mb-2 shrink-0">
+                <i class="fa-solid fa-camera"></i> Sol Galeri (4 Alan)
+            </h3>
+            <div class="custom-scroll pr-1 space-y-3 overflow-y-auto flex-grow">
+                <div class="grid grid-cols-2 gap-3">
+                    <!-- Sol 1 -->
+                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sol+Kare+1', 'Sol Kare #1')">
+                        <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
+                        <span class="text-[10px] font-bold text-gray-400">Kare #1</span>
+                    </div>
+                    <!-- Sol 2 -->
+                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sol+Kare+2', 'Sol Kare #2')">
+                        <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
+                        <span class="text-[10px] font-bold text-gray-400">Kare #2</span>
+                    </div>
+                    <!-- Sol 3 -->
+                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sol+Kare+3', 'Sol Kare #3')">
+                        <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
+                        <span class="text-[10px] font-bold text-gray-400">Kare #3</span>
+                    </div>
+                    <!-- Sol 4 -->
+                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sol+Kare+4', 'Sol Kare #4')">
+                        <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
+                        <span class="text-[10px] font-bold text-gray-400">Kare #4</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ORTA ALAN: HİKAYE (Fare Scroll ile Kaydırılabilir) -->
+        <section class="lg:col-span-6 flex flex-col h-full overflow-hidden">
+            <div class="card-bg rounded-2xl p-6 shadow-xl border border-blue-500/30 flex flex-col h-full overflow-hidden">
+                <h2 class="text-xl font-black font-orbitron text-cyan-400 mb-4 flex items-center gap-3 border-b border-gray-800 pb-3 shrink-0">
+                    <i class="fa-solid fa-book-open text-blue-500"></i> Karakter Geçmişi & Hikaye
+                </h2>
+                
+                <!-- Metin Kaydırma Alanı -->
+                <div class="custom-scroll pr-3 space-y-4 overflow-y-auto flex-grow story-text">
+                    <p>
+                        Gabriel, 2005 yılında Los Santos'ta doğmuştur. Annesi ve babası da Los Santos yerlisi, siyahi bir ailedendir. Ailesiyle birlikte 2017 yılına kadar Vinewood'daki bir apartman dairesinde yaşamıştır. Lise çağına kadar sakin bir hayat süren Gabriel, eğitimi için şehrin güneyindeki yatılı bir teknik liseye kayıt olmuş ve burada geçirdiği yıllar, onu bugünkü haline getiren önemli olaylara sahne olmuştur.
+                    </p>
+                    <p>
+                        İlk yıllarında derslerine odaklanan Gabriel, çevresindeki gruplar tarafından dışlanmış ve yalnız bir sosyal hayat sürmüştür. Bu durumdan olumsuz etkilenen ve değişim isteyen Gabriel, ikinci yılında çeşitli gruplara dahil olmaya çalışmış, ancak her denemesinde reddedilmiştir. Bu dışlanma, üçüncü yılının sonuna kadar sürmüştür.
+                    </p>
+                    <p>
+                        Bir gün, Jean adlı bir öğrenci, Gabriel'e yaklaşıp <span class="text-cyan-300">"Sen… Ne kadar cesursun?"</span> diye sormuştur. Gabriel'in <span class="text-cyan-300">"Yalnız kalacak kadar,"</span> cevabını alınca, Jean okulun önündeki otomatı işaret ederek, <span class="text-cyan-300">"Deposunu patlatırsan, artık 'Yalnız' olmayacaksın,"</span> demiş ve uzaklaşmıştır.
+                    </p>
+                    <p>
+                        Gabriel bu grubu tanıyordu. Okul dışında etkin olan bu grubun kendisine bir şans sunduğunu düşündü ve bu fırsatın önemli olduğunu hissetti. Otomatı birkaç saat izledikten sonra, <span class="text-yellow-400 font-bold">"Kaybedecek neyim var ki?"</span> diyerek harekete geçti.
+                    </p>
+                    <p>
+                        Planını uyguladı: otomatın yanına bir konteyner yerleştirdi, arkasına geçip panelini açarak sistemi kapattı. Kasanın kilidini kırdı ve iki avuç dolusu bozuk parayı tişörtüne sararak aldı. İçi bozukluk dolu tişörtü omzunda, grubun bulunduğu yere doğru yürüdü.
+                    </p>
+                    <p>
+                        Jean, sakızını çiğneyerek, <span class="text-cyan-300">"Vaz mı geçtin?"</span> diye sordu. Gabriel kolunu uzatıp tişörtü verdi. Bu başarısı üzerine Gabriel, gülümsemeler ve sıcak bir karşılamayla gruba kabul edildi ve tanışmaya başladı. Ekipten biri, <span class="text-yellow-300 font-extrabold">"Gabi! Yavaşsın ama akıllısın,"</span> dedi.
+                    </p>
+                    <p>
+                        İşte o andan itibaren Gabriel, <span class="text-blue-400 font-extrabold">"Gabi"</span> oldu. Yavaşlığını bir kusur olarak görüp hızlı olmaya çalıştı. Bu hırs, hayatının geri kalanında ona hatalar yaptırsa da, lise boyunca grubuyla girdiği kavgalar ve yağma eylemleri nedeniyle eğitim sicili bozuldu. Liseyi son sınıfta bıraktı ve ailesinin yanına geri taşındı.
+                    </p>
+                    <p>
+                        Ancak aile, yaşadığı maddi sorunlar ve aile içi şiddet nedeniyle dağılmıştı. Gabriel, bir iş fırsatıyla Sandy Shores'ta yatılı bir fabrika işi buldu ve geri dönüşüm atık tesisinde çalışmaya başladı. 19 yaşına geldiğinde annesi babası tarafından öldürüldü ve babası hapse atıldı; böylece Gabriel artık aile yapısını da kaybetmiş oldu.
+                    </p>
+                    <p>
+                        19 yaşında iş hayatının yorgunluğuna ek olarak arada bir şeyler çizmeye, boş vakitlerinde basketbol ve kaykay gibi aktivitelerle vakit geçirmeye devam etti. 20 yaşında ufak bir iş planıyla Los Santos şehir merkezindeki bir dükkanla anlaşan Gabi, buradan ufak eşyaları toplu alarak Sandy'de yaşadığı bölgede satmaya ve kâr etmeye çalıştı. Amacı fazla kazanmak değil, yaptığı işleri büyütmek ve farklı alanlarda kendini geliştirmekti. Buradan gelen parayla lise eğitimini tamamladı ve zamanla farklı yeterlilik belgeleri almaya, kendini geliştirmeye odaklandı.
+                    </p>
+                    <p>
+                        Fabrikada ilerlemesine imkan yoktu; ek olarak yaptığı işi fazla büyütüyordu ve vakti yetersizdi. Ancak bu alanda sınırın hiçe yakın olduğunu ve büyümesinin kendi çabasıyla doğru orantılı olduğunu gördü. İşten çıkışını vermek için plan yapmaya başladı. Biraz birikimi, önü açık bir iş planı ve şu anki işinden daha rahat olacağını düşündüğü günlük işlerde çalışabilme imkanı vardı; bu şartlar onun adım atması için gayet kabul edilebilirdi ve ilk adımı attı. İşinden ayrıldı, şehir merkezinde kalacak bir yer ayarlayıp yerleşti.
+                    </p>
+                    <div class="bg-blue-950/60 border-l-4 border-cyan-400 p-4 rounded-r-xl mt-4">
+                        <p class="text-cyan-200 font-bold text-base m-0">
+                            Şimdi 21 yaşında, birikimi ve iş planıyla Los Santos'ta hayatına devam etmeye çalışıyor. Şehirde yeni bir iş bulmayı ve işlerini büyütmeyi düşünüyor…
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SAĞ GÖRSEL ALANI (8'li Grid) -->
+        <aside class="lg:col-span-3 flex flex-col h-full overflow-hidden">
+            <h3 class="text-lg font-bold font-orbitron text-cyan-400 flex items-center gap-2 mb-2 shrink-0">
+                <i class="fa-solid fa-camera"></i> Sağ Galeri (8 Alan)
+            </h3>
+            <div class="custom-scroll pr-1 space-y-3 overflow-y-auto flex-grow">
+                <div class="grid grid-cols-2 gap-3">
+                    <!-- Sağ 1 -->
+                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sağ+Kare+1', 'Sağ Kare #1')">
+                        <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
+                        <span class="text-[10px] font-bold text-gray-400">Kare #1</span>
+                    </div>
+                    <!-- Sağ 2 -->
+                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sağ+Kare+2', 'Sağ Kare #2')">
+                        <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
+                        <span class="text-[10px] font-bold text-gray-400">Kare #2</span>
+                    </div>
+                    <!-- Sağ 3 -->
+                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sağ+Kare+3', 'Sağ Kare #3')">
+                        <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
+                        <span class="text-[10px] font-bold text-gray-400">Kare #3</span>
+                    </div>
+                    <!-- Sağ 4 -->
+                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sağ+Kare+4', 'Sağ Kare #4')">
+                        <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
+                        <span class="text-[10px] font-bold text-gray-400">Kare #4</span>
+                    </div>
+                    <!-- Sağ 5 -->
+                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sağ+Kare+5', 'Sağ Kare #5')">
+                        <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
+                        <span class="text-[10px] font-bold text-gray-400">Kare #5</span>
+                    </div>
+                    <!-- Sağ 6 -->
+                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sağ+Kare+6', 'Sağ Kare #6')">
+                        <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
+                        <span class="text-[10px] font-bold text-gray-400">Kare #6</span>
+                    </div>
+                    <!-- Sağ 7 -->
+                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sağ+Kare+7', 'Sağ Kare #7')">
+                        <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
+                        <span class="text-[10px] font-bold text-gray-400">Kare #7</span>
+                    </div>
+                    <!-- Sağ 8 -->
+                    <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sağ+Kare+8', 'Sağ Kare #8')">
+                        <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
+                        <span class="text-[10px] font-bold text-gray-400">Kare #8</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+    </main>
+
+    <!-- FOTOĞRAF BÜYÜTME (LIGHTBOX) MODAL PENCERESİ -->
+    <div id="imageModal" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4 backdrop-blur-md" onclick="closeModal()">
+        <div class="relative max-w-4xl w-full bg-gray-900 border border-blue-500/40 rounded-2xl p-4 shadow-2xl flex flex-col items-center" onclick="event.stopPropagation()">
+            <button onclick="closeModal()" class="absolute top-3 right-3 text-gray-400 hover:text-white bg-gray-800 hover:bg-red-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <img id="modalImg" src="" alt="Büyük Görsel" class="max-h-[75vh] w-auto object-contain rounded-lg border border-gray-800 mb-3">
+            <h3 id="modalTitle" class="text-cyan-400 font-orbitron font-bold text-lg"></h3>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT: Görsel Büyütme ve ESC Tuşu Kontrolü -->
+    <script>
+        function openModal(imgSrc, title) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImg');
+            const modalTitle = document.getElementById('modalTitle');
+            
+            modalImg.src = imgSrc;
+            modalTitle.innerText = title;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
