@@ -13,7 +13,7 @@
             font-family: 'Inter', sans-serif;
             background-color: #0b0f19;
             color: #ffffff;
-            overflow: hidden; /* Sayfanın genel kaymasını engeller */
+            overflow: hidden;
         }
         .font-orbitron {
             font-family: 'Orbitron', sans-serif;
@@ -62,13 +62,13 @@
 <body class="h-full flex flex-col">
 
     <!-- HEADER / HERO -->
-    <header class="relative bg-gradient-to-r from-gray-900 via-blue-950 to-gray-900 border-b border-blue-900/40 py-6 px-4 shadow-2xl shrink-0">
+    <header class="relative bg-gradient-to-r from-gray-900 via-blue-950 to-gray-900 border-b border-blue-900/40 py-5 px-4 shadow-2xl shrink-0">
         <div class="max-w-[1700px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
             <div class="flex flex-col md:flex-row items-center gap-4">
                 <div class="relative">
-                    <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-blue-600 to-cyan-400 p-1 shadow-lg shadow-blue-500/20">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-blue-600 to-cyan-400 p-1 shadow-lg shadow-blue-500/20">
                         <div class="w-full h-full bg-gray-900 rounded-2xl flex items-center justify-center overflow-hidden">
-                            <i class="fa-solid fa-user-secret text-3xl text-blue-400"></i>
+                            <i class="fa-solid fa-user-secret text-2xl text-blue-400"></i>
                         </div>
                     </div>
                     <span class="absolute -bottom-2 -right-2 bg-blue-600 text-[10px] font-orbitron px-2 py-0.5 rounded-full text-white border border-blue-400 shadow">CREW RP</span>
@@ -80,7 +80,6 @@
                 </div>
             </div>
 
-            <!-- Karakter Künyesi Kutusu -->
             <div class="bg-gray-900/80 p-3 rounded-xl border border-blue-500/30 flex flex-wrap gap-4 text-sm font-bold">
                 <div><span class="text-gray-400">Doğum:</span> <span class="text-yellow-400">08-03-2005</span></div>
                 <div><span class="text-gray-400">Uyruk:</span> <span class="text-blue-400">LS</span></div>
@@ -90,22 +89,21 @@
     </header>
 
     <!-- MAIN CONTENT -->
-    <main class="max-w-[1700px] mx-auto px-4 py-4 flex-grow w-full grid grid-cols-1 lg:grid-cols-12 gap-6 overflow-hidden h-[calc(100vh-130px)]">
+    <main class="max-w-[1700px] mx-auto px-4 py-4 flex-grow w-full grid grid-cols-1 lg:grid-cols-12 gap-4 overflow-hidden h-[calc(100vh-110px)]">
 
-        <!-- SOL GÖRSEL ALANI (Kırmızı kutu boyutunda 2 Sütun x 4 Satır) -->
+        <!-- SOL GÖRSEL ALANI (3x5 Grid / 15 Kare) -->
         <aside class="lg:col-span-3 flex flex-col h-full overflow-hidden">
-            <h3 class="text-lg font-bold font-orbitron text-cyan-400 flex items-center gap-2 mb-2 shrink-0 justify-start">
+            <h3 class="text-base font-bold font-orbitron text-cyan-400 flex items-center gap-2 mb-2 shrink-0 justify-start">
                 <i class="fa-solid fa-camera"></i> GALERİ
             </h3>
             <div class="custom-scroll pr-1 flex-grow">
-                <div class="grid grid-cols-2 gap-4">
-                    <!-- Sol 1 - 8 -->
+                <div class="grid grid-cols-3 gap-2.5">
                     <script>
-                        for(let i=1; i<=8; i++) {
+                        for(let i=1; i<=15; i++) {
                             document.write(`
-                                <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-3 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sol+Kare+${i}', 'Sol Kare #${i}')">
-                                    <i class="fa-solid fa-image text-3xl text-gray-600 mb-2"></i>
-                                    <span class="text-xs font-bold text-gray-400">Kare #${i}</span>
+                                <div class="gallery-item aspect-square bg-gray-900 rounded-lg border border-blue-900/50 flex flex-col items-center justify-center p-1 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sol+Kare+${i}', 'Sol Kare #${i}')">
+                                    <i class="fa-solid fa-image text-xl text-gray-600 mb-1"></i>
+                                    <span class="text-[9px] font-bold text-gray-400">Kare #${i}</span>
                                 </div>
                             `);
                         }
@@ -121,7 +119,6 @@
                     <i class="fa-solid fa-book-open text-blue-500"></i> Karakter Geçmişi & Hikaye
                 </h2>
                 
-                <!-- Metin Kaydırma Alanı -->
                 <div class="custom-scroll pr-3 space-y-4 overflow-y-auto flex-grow story-text">
                     <p>
                         Gabriel, 2005 yılında Los Santos'ta doğmuştur. Annesi ve babası da Los Santos yerlisi, siyahi bir ailedendir. Ailesiyle birlikte 2017 yılına kadar Vinewood'daki bir apartman dairesinde yaşamıştır. Lise çağına kadar sakin bir hayat süren Gabriel, eğitimi için şehrin güneyindeki yatılı bir teknik liseye kayıt olmuş ve burada geçirdiği yıllar, onu bugünkü haline getiren önemli olaylara sahne olmuştur.
@@ -162,18 +159,17 @@
             </div>
         </section>
 
-        <!-- SAĞ GÖRSEL ALANI (Kırmızı kutu boyutunda 2 Sütun x 4 Satır) -->
+        <!-- SAĞ GÖRSEL ALANI (3x5 Grid / 15 Kare) -->
         <aside class="lg:col-span-3 flex flex-col h-full overflow-hidden">
-            <div class="h-8 mb-2 shrink-0"></div>
+            <div class="h-7 mb-2 shrink-0"></div>
             <div class="custom-scroll pr-1 flex-grow">
-                <div class="grid grid-cols-2 gap-4">
-                    <!-- Sağ 1 - 8 -->
+                <div class="grid grid-cols-3 gap-2.5">
                     <script>
-                        for(let i=1; i<=8; i++) {
+                        for(let i=1; i<=15; i++) {
                             document.write(`
-                                <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-3 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sa%C4%9F+Kare+${i}', 'Sağ Kare #${i}')">
-                                    <i class="fa-solid fa-image text-3xl text-gray-600 mb-2"></i>
-                                    <span class="text-xs font-bold text-gray-400">Kare #${i}</span>
+                                <div class="gallery-item aspect-square bg-gray-900 rounded-lg border border-blue-900/50 flex flex-col items-center justify-center p-1 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sag+Kare+${i}', 'Sağ Kare #${i}')">
+                                    <i class="fa-solid fa-image text-xl text-gray-600 mb-1"></i>
+                                    <span class="text-[9px] font-bold text-gray-400">Kare #${i}</span>
                                 </div>
                             `);
                         }
