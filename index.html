@@ -24,13 +24,22 @@
             background: linear-gradient(145deg, #111827 0%, #0f172a 100%);
             border: 1px solid rgba(59, 130, 246, 0.25);
         }
-        /* Kod içi metinlerin ekstra kalın ve büyük durması için */
         .story-text p {
-            font-size: 1.125rem; /* 18px */
+            font-size: 1.125rem;
             line-height: 1.8;
-            font-weight: 600; /* Kalın font */
+            font-weight: 600;
             color: #f3f4f6;
             margin-bottom: 1.25rem;
+        }
+        /* Görsel Hover ve Büyütme Efektleri */
+        .gallery-item {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .gallery-item:hover {
+            border-color: rgba(59, 130, 246, 0.8);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
         }
     </style>
 </head>
@@ -64,120 +73,8 @@
         </div>
     </header>
 
-    <!-- MAIN CONTENT (Üç Kolonlu Düzen: Sol Görseller - Hikaye - Sağ Görseller) -->
-    <main class="max-w-[1600px] mx-auto px-4 py-8 flex-grow w-full grid grid-cols-1 lg:grid-cols-12 gap-6">
+    <!-- MAIN CONTENT -->
+    <main class="max-w-[1700px] mx-auto px-4 py-8 flex-grow w-full grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
 
         <!-- SOL GÖRSEL ALANI (2x2 Grid) -->
-        <aside class="lg:col-span-3 space-y-4">
-            <h3 class="text-xl font-bold font-orbitron text-cyan-400 flex items-center gap-2 mb-2">
-                <i class="fa-solid fa-camera"></i> Galeri (Sol)
-            </h3>
-            <div class="grid grid-cols-2 gap-3">
-                <!-- Görsel 1 -->
-                <div class="aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center group hover:border-cyan-400 transition">
-                    <i class="fa-solid fa-image text-3xl text-gray-600 group-hover:text-cyan-400 mb-2"></i>
-                    <span class="text-xs font-bold text-gray-400">Rolden Kare #1</span>
-                </div>
-                <!-- Görsel 2 -->
-                <div class="aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center group hover:border-cyan-400 transition">
-                    <i class="fa-solid fa-image text-3xl text-gray-600 group-hover:text-cyan-400 mb-2"></i>
-                    <span class="text-xs font-bold text-gray-400">Rolden Kare #2</span>
-                </div>
-                <!-- Görsel 3 -->
-                <div class="aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center group hover:border-cyan-400 transition">
-                    <i class="fa-solid fa-image text-3xl text-gray-600 group-hover:text-cyan-400 mb-2"></i>
-                    <span class="text-xs font-bold text-gray-400">Rolden Kare #3</span>
-                </div>
-                <!-- Görsel 4 -->
-                <div class="aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center group hover:border-cyan-400 transition">
-                    <i class="fa-solid fa-image text-3xl text-gray-600 group-hover:text-cyan-400 mb-2"></i>
-                    <span class="text-xs font-bold text-gray-400">Rolden Kare #4</span>
-                </div>
-            </div>
-        </aside>
-
-        <!-- ORTA ALAN: EKSİKSİZ HİKAYE -->
-        <section class="lg:col-span-6 space-y-6">
-            <div class="card-bg rounded-2xl p-6 md:p-8 shadow-xl border border-blue-500/30">
-                <h2 class="text-2xl font-black font-orbitron text-cyan-400 mb-6 flex items-center gap-3 border-b border-gray-800 pb-4">
-                    <i class="fa-solid fa-book-open text-blue-500"></i> Karakter Geçmişi & Hikaye
-                </h2>
-                
-                <div class="story-text">
-                    <p>
-                        Gabriel, 2005 yılında Los Santos'ta doğmuştur. Annesi ve babası da Los Santos yerlisi, siyahi bir ailedendir. Ailesiyle birlikte 2017 yılına kadar Vinewood'daki bir apartman dairesinde yaşamıştır. Lise çağına kadar sakin bir hayat süren Gabriel, eğitimi için şehrin güneyindeki yatılı bir teknik liseye kayıt olmuş ve burada geçirdiği yıllar, onu bugünkü haline getiren önemli olaylara sahne olmuştur.
-                    </p>
-                    <p>
-                        İlk yıllarında derslerine odaklanan Gabriel, çevresindeki gruplar tarafından dışlanmış ve yalnız bir sosyal hayat sürmüştür. Bu durumdan olumsuz etkilenen ve değişim isteyen Gabriel, ikinci yılında çeşitli gruplara dahil olmaya çalışmış, ancak her denemesinde reddedilmiştir. Bu dışlanma, üçüncü yılının sonuna kadar sürmüştür.
-                    </p>
-                    <p>
-                        Bir gün, Jean adlı bir öğrenci, Gabriel'e yaklaşıp <span class="text-cyan-300">"Sen… Ne kadar cesursun?"</span> diye sormuştur. Gabriel'in <span class="text-cyan-300">"Yalnız kalacak kadar,"</span> cevabını alınca, Jean okulun önündeki otomatı işaret ederek, <span class="text-cyan-300">"Deposunu patlatırsan, artık 'Yalnız' olmayacaksın,"</span> demiş ve uzaklaşmıştır.
-                    </p>
-                    <p>
-                        Gabriel bu grubu tanıyordu. Okul dışında etkin olan bu grubun kendisine bir şans sunduğunu düşündü ve bu fırsatın önemli olduğunu hissetti. Otomatı birkaç saat izledikten sonra, <span class="text-yellow-400 font-bold">"Kaybedecek neyim var ki?"</span> diyerek harekete geçti.
-                    </p>
-                    <p>
-                        Planını uyguladı: otomatın yanına bir konteyner yerleştirdi, arkasına geçip panelini açarak sistemi kapattı. Kasanın kilidini kırdı ve iki avuç dolusu bozuk parayı tişörtüne sararak aldı. İçi bozukluk dolu tişörtü omzunda, grubun bulunduğu yere doğru yürüdü.
-                    </p>
-                    <p>
-                        Jean, sakızını çiğneyerek, <span class="text-cyan-300">"Vaz mı geçtin?"</span> diye sordu. Gabriel kolunu uzatıp tişörtü verdi. Bu başarısı üzerine Gabriel, gülümsemeler ve sıcak bir karşılamayla gruba kabul edildi ve tanışmaya başladı. Ekipten biri, <span class="text-yellow-300 font-extrabold">"Gabi! Yavaşsın ama akıllısın,"</span> dedi.
-                    </p>
-                    <p>
-                        İşte o andan itibaren Gabriel, <span class="text-blue-400 font-extrabold">"Gabi"</span> oldu. Yavaşlığını bir kusur olarak görüp hızlı olmaya çalıştı. Bu hırs, hayatının geri kalanında ona hatalar yaptırsa da, lise boyunca grubuyla girdiği kavgalar ve yağma eylemleri nedeniyle eğitim sicili bozuldu. Liseyi son sınıfta bıraktı ve ailesinin yanına geri taşındı.
-                    </p>
-                    <p>
-                        Ancak aile, yaşadığı maddi sorunlar ve aile içi şiddet nedeniyle dağılmıştı. Gabriel, bir iş fırsatıyla Sandy Shores'ta yatılı bir fabrika işi buldu ve geri dönüşüm atık tesisinde çalışmaya başladı. 19 yaşına geldiğinde annesi babası tarafından öldürüldü ve babası hapse atıldı; böylece Gabriel artık aile yapısını da kaybetmiş oldu.
-                    </p>
-                    <p>
-                        19 yaşında iş hayatının yorgunluğuna ek olarak arada bir şeyler çizmeye, boş vakitlerinde basketbol ve kaykay gibi aktivitelerle vakit geçirmeye devam etti. 20 yaşında ufak bir iş planıyla Los Santos şehir merkezindeki bir dükkanla anlaşan Gabi, buradan ufak eşyaları toplu alarak Sandy'de yaşadığı bölgede satmaya ve kâr etmeye çalıştı. Amacı fazla kazanmak değil, yaptığı işleri büyütmek ve farklı alanlarda kendini geliştirmekti. Buradan gelen parayla lise eğitimini tamamladı ve zamanla farklı yeterlilik belgeleri almaya, kendini geliştirmeye odaklandı.
-                    </p>
-                    <p>
-                        Fabrikada ilerlemesine imkan yoktu; ek olarak yaptığı işi fazla büyütüyordu ve vakti yetersizdi. Ancak bu alanda sınırın hiçe yakın olduğunu ve büyümesinin kendi çabasıyla doğru orantılı olduğunu gördü. İşten çıkışını vermek için plan yapmaya başladı. Biraz birikimi, önü açık bir iş planı ve şu anki işinden daha rahat olacağını düşündüğü günlük işlerde çalışabilme imkanı vardı; bu şartlar onun adım atması için gayet kabul edilebilirdi ve ilk adımı attı. İşinden ayrıldı, şehir merkezinde kalacak bir yer ayarlayıp yerleşti.
-                    </p>
-                    <div class="bg-blue-950/60 border-l-4 border-cyan-400 p-5 rounded-r-xl mt-6">
-                        <p class="text-cyan-200 font-bold text-lg m-0">
-                            Şimdi 21 yaşında, birikimi ve iş planıyla Los Santos'ta hayatına devam etmeye çalışıyor. Şehirde yeni bir iş bulmayı ve işlerini büyütmeyi düşünüyor…
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SAĞ GÖRSEL ALANI (2x2 Grid) -->
-        <aside class="lg:col-span-3 space-y-4">
-            <h3 class="text-xl font-bold font-orbitron text-cyan-400 flex items-center gap-2 mb-2">
-                <i class="fa-solid fa-camera"></i> Galeri (Sağ)
-            </h3>
-            <div class="grid grid-cols-2 gap-3">
-                <!-- Görsel 5 -->
-                <div class="aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center group hover:border-cyan-400 transition">
-                    <i class="fa-solid fa-image text-3xl text-gray-600 group-hover:text-cyan-400 mb-2"></i>
-                    <span class="text-xs font-bold text-gray-400">Rolden Kare #5</span>
-                </div>
-                <!-- Görsel 6 -->
-                <div class="aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center group hover:border-cyan-400 transition">
-                    <i class="fa-solid fa-image text-3xl text-gray-600 group-hover:text-cyan-400 mb-2"></i>
-                    <span class="text-xs font-bold text-gray-400">Rolden Kare #6</span>
-                </div>
-                <!-- Görsel 7 -->
-                <div class="aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center group hover:border-cyan-400 transition">
-                    <i class="fa-solid fa-image text-3xl text-gray-600 group-hover:text-cyan-400 mb-2"></i>
-                    <span class="text-xs font-bold text-gray-400">Rolden Kare #7</span>
-                </div>
-                <!-- Görsel 8 -->
-                <div class="aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center group hover:border-cyan-400 transition">
-                    <i class="fa-solid fa-image text-3xl text-gray-600 group-hover:text-cyan-400 mb-2"></i>
-                    <span class="text-xs font-bold text-gray-400">Rolden Kare #8</span>
-                </div>
-            </div>
-        </aside>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="text-center py-6 text-gray-400 text-sm font-semibold border-t border-gray-800 mt-12 bg-gray-950">
-        <p>Gabriel Ryder Roleplay Karakter Sayfası &copy; 2026 | CREW RP</p>
-    </footer>
-
-</body>
-</html>
+        <aside class="lg:col-span
