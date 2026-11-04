@@ -32,7 +32,6 @@
             color: #f3f4f6;
             margin-bottom: 1.25rem;
         }
-        /* Sadece alanların kendi içinde kaydırılabilmesi için özel scrollbar */
         .custom-scroll {
             overflow-y: auto;
             scrollbar-width: thin;
@@ -62,7 +61,7 @@
 </head>
 <body class="h-full flex flex-col">
 
-    <!-- HEADER / HERO (Sabit Üst Alan) -->
+    <!-- HEADER / HERO -->
     <header class="relative bg-gradient-to-r from-gray-900 via-blue-950 to-gray-900 border-b border-blue-900/40 py-6 px-4 shadow-2xl shrink-0">
         <div class="max-w-[1700px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
             <div class="flex flex-col md:flex-row items-center gap-4">
@@ -90,23 +89,23 @@
         </div>
     </header>
 
-    <!-- MAIN CONTENT (Tam Ekran Sabit Düzen) -->
+    <!-- MAIN CONTENT -->
     <main class="max-w-[1700px] mx-auto px-4 py-4 flex-grow w-full grid grid-cols-1 lg:grid-cols-12 gap-6 overflow-hidden h-[calc(100vh-130px)]">
 
-        <!-- SOL GÖRSEL ALANI (3x5 Grid / 15 Kare) -->
+        <!-- SOL GÖRSEL ALANI (Kırmızı kutu boyutunda 2 Sütun x 4 Satır) -->
         <aside class="lg:col-span-3 flex flex-col h-full overflow-hidden">
             <h3 class="text-lg font-bold font-orbitron text-cyan-400 flex items-center gap-2 mb-2 shrink-0 justify-start">
                 <i class="fa-solid fa-camera"></i> GALERİ
             </h3>
             <div class="custom-scroll pr-1 flex-grow">
-                <div class="grid grid-cols-3 gap-3">
-                    <!-- Sol 1 - 15 -->
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Sol 1 - 8 -->
                     <script>
-                        for(let i=1; i<=15; i++) {
+                        for(let i=1; i<=8; i++) {
                             document.write(`
-                                <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sol+Kare+${i}', 'Sol Kare #${i}')">
-                                    <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
-                                    <span class="text-[10px] font-bold text-gray-400">Kare #${i}</span>
+                                <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-3 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sol+Kare+${i}', 'Sol Kare #${i}')">
+                                    <i class="fa-solid fa-image text-3xl text-gray-600 mb-2"></i>
+                                    <span class="text-xs font-bold text-gray-400">Kare #${i}</span>
                                 </div>
                             `);
                         }
@@ -115,7 +114,7 @@
             </div>
         </aside>
 
-        <!-- ORTA ALAN: HİKAYE (Fare Scroll ile Kaydırılabilir) -->
+        <!-- ORTA ALAN: HİKAYE -->
         <section class="lg:col-span-6 flex flex-col h-full overflow-hidden">
             <div class="card-bg rounded-2xl p-6 shadow-xl border border-blue-500/30 flex flex-col h-full overflow-hidden">
                 <h2 class="text-xl font-black font-orbitron text-cyan-400 mb-4 flex items-center gap-3 border-b border-gray-800 pb-3 shrink-0">
@@ -163,18 +162,18 @@
             </div>
         </section>
 
-        <!-- SAĞ GÖRSEL ALANI (3x5 Grid / 15 Kare) -->
+        <!-- SAĞ GÖRSEL ALANI (Kırmızı kutu boyutunda 2 Sütun x 4 Satır) -->
         <aside class="lg:col-span-3 flex flex-col h-full overflow-hidden">
             <div class="h-8 mb-2 shrink-0"></div>
             <div class="custom-scroll pr-1 flex-grow">
-                <div class="grid grid-cols-3 gap-3">
-                    <!-- Sağ 1 - 15 -->
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Sağ 1 - 8 -->
                     <script>
-                        for(let i=1; i<=15; i++) {
+                        for(let i=1; i<=8; i++) {
                             document.write(`
-                                <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-2 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sag+Kare+${i}', 'Sağ Kare #${i}')">
-                                    <i class="fa-solid fa-image text-2xl text-gray-600 mb-1"></i>
-                                    <span class="text-[10px] font-bold text-gray-400">Kare #${i}</span>
+                                <div class="gallery-item aspect-square bg-gray-900 rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-3 text-center overflow-hidden relative" onclick="openModal('https://via.placeholder.com/800x600/111827/3b82f6?text=Sa%C4%9F+Kare+${i}', 'Sağ Kare #${i}')">
+                                    <i class="fa-solid fa-image text-3xl text-gray-600 mb-2"></i>
+                                    <span class="text-xs font-bold text-gray-400">Kare #${i}</span>
                                 </div>
                             `);
                         }
@@ -185,7 +184,7 @@
 
     </main>
 
-    <!-- FOTOĞRAF BÜYÜTME (LIGHTBOX) MODAL PENCERESİ -->
+    <!-- FOTOĞRAF BÜYÜTME MODAL PENCERESİ -->
     <div id="imageModal" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4 backdrop-blur-md" onclick="closeModal()">
         <div class="relative max-w-4xl w-full bg-gray-900 border border-blue-500/40 rounded-2xl p-4 shadow-2xl flex flex-col items-center" onclick="event.stopPropagation()">
             <button onclick="closeModal()" class="absolute top-3 right-3 text-gray-400 hover:text-white bg-gray-800 hover:bg-red-600 w-10 h-10 rounded-full flex items-center justify-center transition">
@@ -196,7 +195,7 @@
         </div>
     </div>
 
-    <!-- JAVASCRIPT: Görsel Büyütme ve ESC Tuşu Kontrolü -->
+    <!-- JAVASCRIPT: Lightbox & ESC Kontrolü -->
     <script>
         function openModal(imgSrc, title) {
             const modal = document.getElementById('imageModal');
