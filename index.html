@@ -69,7 +69,7 @@
             border-radius: 8px;
         }
         
-        /* Tam 250x250 Sabit Boyut */
+        /* Tam 250x250 Sabit Boyut Koruması */
         .fixed-box {
             width: 250px;
             height: 250px;
@@ -126,7 +126,7 @@
     <!-- MAIN CONTENT -->
     <main class="w-full px-4 py-4 flex-grow flex flex-row gap-4 overflow-hidden h-[calc(100vh-280px)]">
 
-        <!-- SOL GÖRSEL ALANI (3x3 - 1. Kare Özelleştirildi) -->
+        <!-- SOL GÖRSEL ALANI (3x3 - Bozulmadan Sığan Görsel Düzeneği) -->
         <aside class="flex flex-col h-full overflow-hidden shrink-0">
             <h3 class="text-lg font-bold font-orbitron text-cyan-400 flex items-center gap-2 mb-2 shrink-0">
                 <i class="fa-solid fa-camera"></i> GALERİ
@@ -134,9 +134,9 @@
             <div class="custom-scroll pr-2 flex-grow">
                 <div class="grid grid-cols-3 gap-3">
                     
-                    <!-- Sol 1. Kare (Gönderdiğin Özel Görsel) -->
-                    <div class="gallery-item fixed-box rounded-xl border border-blue-900/50 flex flex-col items-center justify-center p-0 text-center relative overflow-hidden" onclick="openModal('sol-1.jpg', 'Gabriel Ryder - Vinewood Dönüşü')">
-                        <img src="sol-1.jpg" alt="Sol Kare #1" class="w-full h-full object-cover">
+                    <!-- Sol 1. Kare (Bozulmadan Sığacak Şekilde Ayarlandı) -->
+                    <div class="gallery-item fixed-box rounded-xl border border-blue-900/50 flex items-center justify-center relative overflow-hidden" onclick="openModal('sol-1.jpg', 'Gabriel Ryder - Vinewood Dönüşü')">
+                        <img src="sol-1.jpg" alt="Sol Kare #1" class="w-full h-full object-cover object-center">
                     </div>
 
                     <!-- Sol 2 - 9. Kareler -->
@@ -201,7 +201,7 @@
             </div>
         </section>
 
-        <!-- SAĞ GÖRSEL ALANI (3 Sütun x 3 Satır / 250x250 Sabit) -->
+        <!-- SAĞ GÖRSEL ALANI (3 Sütun x 3 Satır) -->
         <aside class="flex flex-col h-full overflow-hidden shrink-0">
             <div class="h-7 mb-2 shrink-0"></div>
             <div class="custom-scroll pr-2 flex-grow">
@@ -222,7 +222,7 @@
 
     </main>
 
-    <!-- FOTOĞRAF BÜYÜTME MODAL PENCERESİ -->
+    <!-- FOTOĞRAF BÜYÜTME MODAL PENCERESİ (Lightbox) -->
     <div id="imageModal" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4 backdrop-blur-md" onclick="closeModal()">
         <div class="relative max-w-4xl w-full bg-gray-900 border border-blue-500/40 rounded-2xl p-4 shadow-2xl flex flex-col items-center" onclick="event.stopPropagation()">
             <button onclick="closeModal()" class="absolute top-3 right-3 text-gray-400 hover:text-white bg-gray-800 hover:bg-red-600 w-10 h-10 rounded-full flex items-center justify-center transition">
